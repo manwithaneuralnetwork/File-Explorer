@@ -26,7 +26,7 @@ class Game:
                 
     def loop(self):
         clock = pygame.time.Clock()
-        dtime = clock.tick(60)
+        clock.tick(60)
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -35,6 +35,8 @@ class Game:
                 elif event.type == pygame.KEYDOWN:
                     if not self.fileWriting == None:
                         self.fileWriting = self.fileWriting.writeName()
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    pass
             self.draw()
    
 if __name__ == '__main__':

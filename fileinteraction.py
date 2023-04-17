@@ -22,6 +22,8 @@ class File:
         else:
             self.name += event.unicode
         return self
+    def drawSelf(self, size, pos, margx, margy):
+        pass
 
 def newFile(event, fileType):
     file = File(fileType)
